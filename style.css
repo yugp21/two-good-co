@@ -1,0 +1,932 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    color: white;
+    background-color: black;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav #nav-left {
+    height: 83px;
+    overflow: hidden;
+}
+
+#nav #nav-left svg{
+    display: block;
+    cursor: pointer;
+}
+
+#nav #nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#nav-right #links a{
+    text-decoration: none;
+    color: #000000c5;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 70px;
+}
+
+#nav-right #icons {
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#nav-right #icons i{
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#nav-right #icons i:nth-child(1){
+    font-size: 25px;
+    margin-right: 3rem;
+}
+
+#cursor{
+    height: 300px;
+    width: 300px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 39.5vh;
+}
+
+#page1 h1{
+    font-size: 16vw;
+    font-family: futura;
+    text-transform: uppercase;
+    line-height: 13vw;
+    text-align: center;
+    letter-spacing: -12px;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vw;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: gray;
+}
+
+#video-container #play {
+    background-color: black;
+    color: white;
+    padding: 3vw 2.2vw;
+    font-family: futura;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    border-radius: 50%;
+    position: fixed;
+    /* position: absolute; */
+    scale: 0;
+    opacity: 0;
+}
+
+#bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: black;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 3rem 1rem 0 1rem;
+}
+
+#page2 {
+    min-height: 110vh;
+    width: 100%;
+    position: relative;
+    margin-top: 38rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+
+#page2 .elem{
+    height: 110%;
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+.elem .dets1{
+    height: 55px;
+    width: 80%;
+    position: absolute;
+    background-color: #e5f0d6;
+    z-index: 9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.elem .dets2{
+    height: 55px;
+    width: 80%;
+    position: absolute;
+    background-color: #f5dfcf;
+    z-index: 9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.elem .dets3{
+    height: 55px;
+    width: 80%;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.first{
+    color: #565950;
+}
+
+.elem .dets1:hover {
+    height: 150px;
+    transform-origin: bottom center;
+}
+
+
+.elem .dets2:hover {
+    height: 150px;
+    transform-origin: bottom center;
+}
+
+.elem .dets3:hover {
+    height: 150px;
+    transform-origin: bottom center;
+}
+
+#page2-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 10rem 0 2rem;
+}
+
+#l-side{
+    font-size: 3rem;
+    font-family: futura;
+    text-align: center;
+}
+
+#r-side{
+    width: 23vw;
+    text-align: center;
+    font-size: 1rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #646464;
+}
+
+#r-side h5{
+    font-size: 0.80rem;
+    font-weight: 200;
+    text-align: center;
+    font-family: sans-serif;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10rem;
+    margin-top: 8rem;
+}
+
+.child{
+    height: 90vh;
+    width: 40vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+} 
+
+.below-text{
+    margin-top: 5rem;
+    color: #646464;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#b2{
+    margin-top: 10rem;
+}
+
+.price-tag{
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.child img{
+    height: 100%;
+    width: 100%;
+}
+
+#page3-bottom {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.779);
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 2rem 0 2rem;
+    font-weight: 100;
+    margin-top: 5rem;
+    padding-bottom: 0.2rem;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: futura;
+    margin-top: 7rem;
+    gap: 5rem;
+}
+
+#page4 p:nth-child(1){
+    font-size: 4rem;
+    padding: 0 10rem 0 10rem;
+}
+
+#page4 .btn{
+    color: white;
+    background-color: black;
+    padding: 1rem 4rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#page4 .btn:hover{
+    color: #d5d6d4b7;
+}
+
+
+#page4 p:nth-child(3){
+    margin-top: -3rem;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    padding: 0 20rem 0 20rem;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 8rem;
+}
+
+#page5 #left1-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 2rem;
+    width: 18rem;
+}
+
+#page5 #left1-side h1{
+    font-family: futura;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+#page5 #left1-side p{
+    font-family: sans-serif;
+}
+
+#page5 #left1-side h5{
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+#page5 #right1-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding: 0 2rem 0 0;
+}
+
+#page5 #right1-side img{
+    height: 35rem;
+}
+
+#page5-bottom{
+    height: 100vh;
+    width: 100%;
+}
+
+#page5-bottom h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(198, 198, 198, 1);
+    font-family: futura;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 10rem 2rem 0 2rem;
+}
+
+#page5-bottom i{
+    font-size: 2rem;
+    font-weight: 100;
+    color: black;
+    cursor: pointer;
+}
+
+#page7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -25rem 2rem 0 2rem;
+}
+
+#page7 #r1-side{
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+#page7 #l1-side{
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+.rh{
+    font-size: 0.8rem;
+    color: #7b7b7b;
+    padding-bottom: 1rem;
+}
+
+.rh1{
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.rh1:hover{
+    color: #9d9c9c;
+}
+
+#page7-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#page7-bottom li{
+    list-style: none;
+    text-transform: uppercase;
+    color: #b9b9b9;
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+}
+
+
+#page7-bottom li:nth-child(2){
+    cursor: pointer;
+}
+
+#page7-bottom li:nth-child(3){
+    cursor: pointer;
+}
+
+#page7-bottom p{
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 4rem 15rem 5rem 15rem;
+}
+
+
+@media (max-width:600px) {
+
+    #nav{
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        padding: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    #nav #nav-left {
+        height: 83px;
+        overflow: hidden;
+    }
+    
+    #nav #nav-left svg{
+        display: block;
+    }
+    
+    #nav #nav-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    #nav-right #links a{
+        display: none;
+        text-decoration: none;
+        color: #000000c5;
+        font-size: 17px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-right: 70px;
+    }
+    
+    #nav-right #icons {
+        border-radius: 50px;
+        background-color: white;
+        padding: 10px;
+        margin-right: 0.5rem;
+    }
+    
+    #nav-right #icons i{
+        font-size: 20px;
+        margin: 20px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    
+    #nav-right #icons i:nth-child(1){
+        font-size: 25px;
+        margin-right: 3rem;
+    }
+
+    #page1 h1{
+        font-size: 14vw;
+        line-height: 13vw;
+        letter-spacing: -2px;
+    }
+    
+    #page1{
+        min-height: 70vh;
+        height: 100vh;
+        width: 100%;
+        padding: 0 1.5rem;
+        padding-top: 25vh;
+    }
+    #video-container {
+        height: 25vh;
+        width: 100%;
+        margin-top: 3vw;
+        padding: 0;
+    }
+
+    #video-container #play {
+        background-color: black;
+        padding: 9.5vw 7.2vw;
+        font-size: 5vw;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        scale: 1;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    #bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        color: black;
+        border-bottom: 2px solid black;
+        text-transform: uppercase;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 2rem 0 0 0;
+    }
+
+    #page2 {
+        min-height: 110vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-top: -5rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5vw 3vw;
+        flex-direction: column;
+    }
+    
+    #page2 .elem{
+        min-height: 100vh;
+        width: 95%;
+        overflow: hidden;
+        margin-bottom: 8rem;
+        margin-top: -20rem;
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+
+    #page2-bottom{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        margin-top: -13rem;
+        flex-direction: column;
+        padding-right: 2rem;
+    }
+    
+    #l-side{
+        font-size: 1.6rem;
+        font-family: futura;
+        text-align: center;
+    }
+    
+    #r-side{
+        width: 100%;
+        font-size: 0.90rem;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: #646464;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    #r-side h5{
+        font-size: 0.80rem;
+        font-weight: 200;
+        font-family: sans-serif;
+        border-bottom: 2px solid black;
+        padding-bottom: 0.3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #page3{
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+    }
+    
+    .child{
+        height: 60vh;
+        width: 100vw;
+        /* background-color: red; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    
+    .below-text{
+        margin-top: 3rem;
+        text-align: center;
+        color: #646464;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    #b2{
+        margin-top: 5rem;
+    }
+    
+    .price-tag{
+        color: black;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .child img{
+        height: 100%;
+        width: 100%;
+    }
+
+    #page3-bottom {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.779);
+        text-transform: uppercase;
+        border-bottom: 1px solid black;
+        width: 100%;
+        font-weight: 100;
+        margin-top: -2rem;
+    }
+
+    #page4 {
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: futura;
+        margin-top: 2rem;
+    }
+    
+    #page4 p:nth-child(1){
+        font-size: 2rem;
+    }
+    
+    #page4 .btn{
+        color: white;
+        background-color: black;
+        padding: 1rem 4rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    
+    #page4 p:nth-child(3){
+        font-size: 1rem;
+        padding: 0 4rem 0 4rem;
+        margin-top: -3rem;
+        color: #707070;
+        font-weight: 500;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #page5{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -35rem;
+    }
+    
+    #page5 #left1-side {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+        width: 18rem;
+        margin-left: -3rem;
+        padding-bottom: 23rem;
+    }
+    
+    #page5 #left1-side h1{
+        font-family: futura;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    
+    #page5 #left1-side p{
+        font-family: sans-serif;
+        width: 100%;
+    }
+    
+    #page5 #left1-side h5{
+        border-bottom: 1px solid black;
+        padding-bottom: 0.5rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 100;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    
+    #page5 #right1-side {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: -70rem;
+        margin-left: 2rem;
+    }
+    
+    #page5 #right1-side img{
+        height: 15rem;
+        width: 12rem;
+    }
+    
+    #page5-bottom{
+        height: 100vh;
+        width: 100%;
+        margin-top: -5rem;
+    }
+    
+    #page5-bottom h1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgb(198, 198, 198, 1);
+        font-family: futura;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 900;
+        margin: 10rem 2rem 0 2rem;
+    }
+    
+    #page5-bottom i{
+        font-size: 2rem;
+        font-weight: 100;
+        color: black;
+        cursor: pointer;
+    }
+    
+    #page7 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: -50rem 2rem 0 2rem;
+    }
+    
+    #page7 #r1-side{
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 100;
+    }
+    
+    #page7 #l1-side{
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 100;
+    }
+    
+    .rh{
+        font-size: 0.8rem;
+        color: #7b7b7b;
+        padding-bottom: 1rem;
+    }
+    
+    .rh1{
+        font-size: 0.7rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .rh1:hover{
+        color: #9d9c9c;
+    }
+    
+    #page7-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    
+    #page7-bottom li{
+        list-style: none;
+        text-transform: uppercase;
+        color: #b9b9b9;
+        font-size: 10px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 2rem;
+    }
+    
+    
+    #page7-bottom li:nth-child(2){
+        cursor: pointer;
+    }
+    
+    #page7-bottom li:nth-child(3){
+        cursor: pointer;
+    }
+    
+    #page7-bottom p{
+        font-size: 14px;
+        font-family: sans-serif;
+        padding: 0 1rem 0 1rem;
+    }
+
+}
