@@ -3,6 +3,7 @@
 //     smooth: true
 // });
 
+
 function locomotiveAnimation() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,7 @@ gsap.to("#nav-right #links",{
 })
 
 function videoAnimation() {
-    var vcont = document.querySelector("#video-container");
+var vcont = document.querySelector("#video-container");
 var play = document.querySelector("#play")
 vcont.addEventListener("mouseenter", function(){
     // play.style.opacity = 1;
